@@ -21,6 +21,9 @@ export default function Home() {
     }
 
     setSelectedFile(file);
+    // Store file in sessionStorage for dashboard access
+    const fileUrl = URL.createObjectURL(file);
+    sessionStorage.setItem("uploadedPDF", fileUrl);
     router.push("/dashboard");
   };
 
