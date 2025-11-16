@@ -36,10 +36,9 @@ export default function Home() {
     console.log("Open Overlay clicked");
   };
 
-  // Placeholder images - replace with actual images
-  // For now using a gradient placeholder - replace with actual image paths
-  const image1 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Crect fill='%23f0f0f0' width='800' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='24' text-anchor='middle' dy='.3em' fill='%23999'%3EImage 1%3C/text%3E%3C/svg%3E";
-  const image2 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Crect fill='%23e0e0e0' width='800' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='24' text-anchor='middle' dy='.3em' fill='%23999'%3EImage 2%3C/text%3E%3C/svg%3E";
+  // Images for the interactive slider
+  const image1 = "/images/landingpageimageone.png";
+  const image2 = "/images/landingpagepicture2.png";
 
   return (
     <div className="min-h-screen bg-black relative">
