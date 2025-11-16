@@ -48,7 +48,7 @@ export default function PDFViewer({ file }: PDFViewerProps) {
 
   if (!file) {
     return (
-      <div className="w-full h-full bg-gray-100 rounded-xl flex items-center justify-center">
+      <div className="w-full h-full bg-gray-800 rounded-xl flex items-center justify-center">
         <p className="text-gray-400 dm-sans-button">No PDF loaded</p>
       </div>
     );
@@ -57,7 +57,7 @@ export default function PDFViewer({ file }: PDFViewerProps) {
   return (
     <div
       ref={containerRef}
-      className="w-full h-full bg-white rounded-xl overflow-hidden shadow-lg"
+      className="w-full h-full bg-black rounded-xl overflow-hidden shadow-lg"
     />
   );
 }

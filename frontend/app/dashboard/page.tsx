@@ -46,25 +46,26 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="h-screen bg-black flex overflow-hidden">
       {/* Sidebar */}
       <Sidebar mainTopic={mainTopic} subtopics={subtopics} />
 
-      {/* Main Content */}
-      <div className="flex-1 ml-64 p-6">
-        <div className="max-w-7xl mx-auto space-y-6">
-          {/* PDF Viewer - Full height container */}
-          <div className="h-[600px]">
-            <PDFViewer file={pdfFile} />
-          </div>
+      {/* Main Content - split into two halves */}
+      <div className="flex-1 ml-64 flex gap-6 p-6">
+        {/* Left half - PDF Viewer */}
+        <div className="w-1/2 h-full">
+          <PDFViewer file={pdfFile} />
+        </div>
 
-          {/* Explanation Container - 0.5 height of PDF */}
-          <div className="h-[300px]">
+        {/* Right half - Explanation and Quiz stacked */}
+        <div className="w-1/2 h-full flex flex-col gap-6">
+          {/* Explanation Container - top half */}
+          <div className="h-1/2">
             <Explanation text={explanationText} />
           </div>
 
-          {/* Quiz Container - 0.5 height of PDF */}
-          <div className="h-[300px]">
+          {/* Quiz Container - bottom half */}
+          <div className="h-1/2">
             <Quiz question={questionText} answers={answers} />
           </div>
         </div>

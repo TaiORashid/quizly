@@ -34,7 +34,7 @@ export default function Quiz({ question, answers }: QuizProps) {
 
   const getButtonStyle = (answer: Answer) => {
     if (!selectedAnswer) {
-      return "bg-white text-black border-2 border-gray-300 hover:border-gray-400";
+      return "bg-gray-800 text-white border-2 border-gray-600 hover:border-gray-500";
     }
 
     // Correct answer always shows green
@@ -47,9 +47,9 @@ export default function Quiz({ question, answers }: QuizProps) {
   };
 
   return (
-    <div className="w-full h-full bg-white rounded-xl p-6 shadow-lg overflow-y-auto">
-      <h3 className="text-xl font-bold mb-4 text-black dm-sans-button">Question</h3>
-      <p className="text-gray-700 mb-6 leading-relaxed dm-sans-button font-normal">
+    <div className="w-full h-full bg-gray-800 rounded-xl p-6 shadow-lg overflow-y-auto">
+      <h3 className="text-xl font-bold mb-4 text-white dm-sans-button">Question</h3>
+      <p className="text-gray-300 mb-6 leading-relaxed dm-sans-button font-normal">
         {question || "No question available."}
       </p>
       <div className="space-y-3">

@@ -21,7 +21,7 @@ export default function Sidebar({ mainTopic, subtopics }: SidebarProps) {
   };
 
   return (
-    <div className="h-screen bg-white w-64 flex flex-col items-center py-6 fixed left-0 top-0 border-r border-gray-200">
+    <div className="h-screen bg-[#034748] w-64 flex flex-col items-center py-6 fixed left-0 top-0 border-r border-gray-200">
       {/* Logo - centered horizontally, near top */}
       <div className="mb-8">
         <div className="bg-white rounded-lg p-3 shadow-lg">
@@ -37,7 +37,7 @@ export default function Sidebar({ mainTopic, subtopics }: SidebarProps) {
 
       {/* Main Topic */}
       <div className="w-full px-6">
-        <h2 className="text-xl font-bold text-black mb-4 dm-sans-button">
+        <h2 className="text-xl font-bold text-white mb-4 dm-sans-button">
           {mainTopic}
         </h2>
 
@@ -47,7 +47,7 @@ export default function Sidebar({ mainTopic, subtopics }: SidebarProps) {
             <div key={subtopic.id} className="w-full">
               <button
                 onClick={() => toggleDropdown(subtopic.id)}
-                className="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors dm-sans-button text-base font-medium"
+                className="w-full text-left px-4 py-2 rounded-lg hover:bg-[#045a5c] transition-colors dm-sans-button text-base font-medium text-white"
               >
                 <div className="flex items-center justify-between">
                   <span>{subtopic.title}</span>
@@ -59,7 +59,7 @@ export default function Sidebar({ mainTopic, subtopics }: SidebarProps) {
               {openDropdown === subtopic.id && (
                 <div className="mt-2 ml-4 space-y-1">
                   {/* Dropdown content - can be expanded later */}
-                  <div className="px-4 py-2 text-sm text-gray-600">
+                  <div className="px-4 py-2 text-sm text-white/80">
                     Content for {subtopic.title}
                   </div>
                 </div>
