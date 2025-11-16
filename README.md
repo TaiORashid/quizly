@@ -1,2 +1,2 @@
-# quizly
-Chaging the future of studying and learning
+# Sensei
+Where lecture slides finally make sense
